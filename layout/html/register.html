@@ -1,0 +1,118 @@
+<style>
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(136, 68, 199);
+}
+    .container{
+    color:#fff;
+    display: grid;
+    margin:100px 100px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 500px;
+    animation: slideBackground 10s infinite linear;
+    background-size: cover;
+    background-position:center;
+    box-shadow: 15px 15px 115px rgb(17, 17, 17);
+    border: 3px solid #dcaef1;
+    border-radius: 15px;
+    }
+    @keyframes slideBackground {
+    0%   { background-image: url('asset/images/images.jpeg'); }
+    33%  { background-image: url('asset/images/images-2.jpeg'); }
+    66%  { background-image: url('asset/images/images-3.jpeg'); }
+    100% { background-image: url('asset/images/images.jpeg'); }
+}
+    form{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap: 30px;
+    }
+    .outline-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 rgb(136, 68, 199),  
+     1px -1px 0 rgb(136, 68, 199),  
+    -1px  1px 0 rgb(136, 68, 199),  
+     1px  1px 0 rgb(136, 68, 199); 
+    }
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius:20px;
+    box-sizing: border-box;
+    }
+    button{
+    padding: 12px 20px;
+     font-size: 16px;
+     cursor: pointer;
+     border: none;
+     background-color:rgb(136, 68, 199);
+     color: #fff;
+     border: 2px solid rgb(196, 145, 243);
+     border-radius: 20px;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+
+    }
+
+    button:hover {
+    background-color: #dcaef1;
+    border: 2px solid rgb(136, 68, 199);
+    
+    }
+
+@media (max-width: 1024px) {
+    .outline-text {
+        font-size: 50px;
+    }
+    .container{
+        margin: 200px auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .outline-text {
+        font-size: 40px;
+    }
+    .container{
+        margin: 150px auto;
+    }
+}
+    
+
+
+@media (max-width: 480px) {
+    .outline-text {
+        font-size: 30px;
+    }
+    .containers{
+        margin: 100pxpx auto;
+    }
+}
+
+</style>
+<div class="container">
+    <h3 class="outline-text">DAFTAR AKUN</h3>
+    <form action="register.php" method="POST">
+       <div class="username">
+            <label for="unamer">Username</label>
+            <input type="text" placeholder="username" name="username"/>
+        </div>
+        <div class="password">
+            <label for="psw">Password</label>
+            <input type="password" placeholder="password" name="password"/>
+        </div>
+        <button type="submit" name="register">Daftar</button>
+    </form>
+    </div>
